@@ -1,9 +1,16 @@
-import { CounterButton } from "./CounterButton";
-import { CounterButtonII } from "./CounterButtonII";
-import { CounterButtonIII } from "./CounterButtonIII";
-import { RecoilRoot } from "recoil";
-import "./App.css";
+import { CounterButton } from "./useState/CounterButton";
+import { CounterButtonII } from "./useContext/CounterButtonII";
+import { CounterButtonIII } from "./recoil/CounterButtonIII";
+import { CounterButtonIV } from "./redux/CounterButtonIV";
+
 import CounterProvider from "./useContext/CounterProvider";
+
+import { RecoilRoot } from "recoil";
+
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+
+import "./App.css";
 
 const App = () => {
   return (
@@ -20,6 +27,10 @@ const App = () => {
         <h1>Recoil Example</h1>
         <CounterButtonIII />
       </RecoilRoot>
+      <Provider store={store}>
+        <h1>Redux Example</h1>
+        <CounterButtonIV />
+      </Provider>
     </>
   );
 };

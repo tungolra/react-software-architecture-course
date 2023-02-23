@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 
-import { CounterContext } from "./useContext/CounterContext";
+import { CounterContext } from "./CounterContext";
 
 export const CounterButtonII = () => {
   const [incrementBy, setIncrementBy] = useState(1);
