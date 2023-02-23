@@ -17,6 +17,7 @@ This course includes:
   - State management tools and techniques depend on:
     - size and complexity of application
       - "small" state (useState, Context)
+        - Context: share state without passing it 
       - "medium" state (Recoil)
       - "large" state (Redux, MobX)
     - number of components that need to share data from server
